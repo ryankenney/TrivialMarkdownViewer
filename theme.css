@@ -16,6 +16,12 @@ h2 {
 	border-bottom-style: solid;
 }
 
+h3 {
+	border-color: lightgrey;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
 code {
 	font-family: "Lucida Console", Monaco, monospace;
 	background: lightgrey;
