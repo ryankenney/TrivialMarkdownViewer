@@ -82,3 +82,14 @@ Image Demos
 
 <img src="limes.jpg" alt="Alt text" width="200px"/>
 
+Link Demos
+----------------
+
+[Markdown] is a simple text-based [markup language]
+created by [John Gruber]
+[John Gruber]:http://daringfireball.net
+
+
+[External Site]:http://www.wikipedia.com
+
+[Local Markdown](other-page.md)

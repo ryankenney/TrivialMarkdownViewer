@@ -12,26 +12,24 @@
 
     function updateMarkdownLinks(markdownJson) {
         var refs = markdownJson[1].references;
-        updateMarkdownLinks_Inner(markdownJson, refs);
+
+        (function updateMarkdownLinks_Inner(mj) {
+            if ( mj[0] === "link" ) {
+                var url = mj[1];
+                if (!url || !url.href || !(/^[\w\- ]+\.md$/.exec(url.href))) {
+                    return;
+                }
+                mj[1].href = "index.html?md=" + encodeURIComponent(url.href);
+            } else {
+                for (var item = 1; item < mj.length; item++) {
+                    if (Array.isArray(mj[item])) {
+                        mj[item].forEach(updateMarkdownLinks_Inner);
+                    }
+                }
+            }
+        }) (markdownJson);
     }
 
-    function updateMarkdownLinks_Inner(markdownJson, refs) {
-        for (var item = 0; item < markdownJson.length; item++) {
-            if ( markdownJson[item] === "link_ref" ) {
-                var ref = markdownJson[1].ref;
-                // if there's no reference, define a wiki link
-                var url = refs[ref];
-                if (!url || !url.href || !(/^[\w\- ]+\.md$/.exec(url.href))) {
-                    continue;
-                }
-                refs[ref] = {
-                    href: "my.html?md=" + url.href.replace(/\s/, "+")
-                };
-            } else if ( Array.isArray(markdownJson[item])) {
-                markdownJson[item].forEach(updateMarkdownLinks_Inner);
-            }
-        }
-    }
 
     $(document).ready(function(){
         var markdownDoc = $.url().param('md');
