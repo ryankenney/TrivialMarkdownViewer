@@ -3,7 +3,7 @@ var head = document.getElementsByTagName('head')[0]
 var link = document.createElement("link")
 link.setAttribute("rel", "stylesheet")
 link.setAttribute("type", "text/css")
-link.setAttribute("href", "theme.css")
+link.setAttribute("href", "css/theme.css")
 head.appendChild(link);
 
 var body = document.getElementsByTagName('body')[0]
@@ -11,15 +11,15 @@ var link = document.createElement("link")
 
 var newScript = document.createElement('script');
 newScript.type = 'text/javascript';
-newScript.src = 'jquery-1.12.3.js';
+newScript.src = 'js/jquery-1.12.3.js';
 document.getElementsByTagName('head')[0].appendChild(newScript);
 newScript = document.createElement('script');
 newScript.type = 'text/javascript';
-newScript.src = 'markdown.js';
+newScript.src = 'js/markdown.js';
 document.getElementsByTagName('head')[0].appendChild(newScript);
 newScript = document.createElement('script');
 newScript.type = 'text/javascript';
-newScript.src = 'purl.js';
+newScript.src = 'js/purl.js';
 document.getElementsByTagName('head')[0].appendChild(newScript);
 
 
