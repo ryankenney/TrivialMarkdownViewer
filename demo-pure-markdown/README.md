@@ -1,7 +1,7 @@
 README.md
 ================
 
-Heading Demos (H2)
+Heading Demo
 ----------------
 
 ### H3
@@ -21,7 +21,7 @@ xxx
 xxx
 
 
-Numbers and Lists Demos
+Numbers and Lists Demo
 ----------------
 
 1. Blah
@@ -36,7 +36,7 @@ Numbers and Lists Demos
 	1. Yada yada
 		* Yada yada
 
-Code Demos
+Code Demo
 ----------------
 
 ```
@@ -59,7 +59,7 @@ Some looooooooooong code asdfa;slf ;alsf;lasdlkfaslf;lasdj ;flkajs;lf ;lasflasfj
 		another line
 		```
 
-Image Demos
+Image Demo
 ----------------
 
 ### Default
@@ -82,14 +82,9 @@ Image Demos
 
 <img src="limes.jpg" alt="Alt text" width="200px"/>
 
-Link Demos
+Link Demo
 ----------------
 
-[Markdown] is a simple text-based [markup language]
-created by [John Gruber]
-[John Gruber]:http://daringfireball.net
+[An External Page](https://daringfireball.net/projects/markdown/syntax)
 
-
-[External Site]:http://www.wikipedia.com
-
-[Local Markdown](other-page.md)
+[A Local Page](other-page.md)
