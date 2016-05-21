@@ -1,0 +1,66 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	background: #0D5F82;
+	color: white;
+	padding: 5px;
+	box-shadow: 8px 8px 8px #6FA7BF;
+}
+
+h2 {
+	color: #0D5F82;
+	border-color: #6FA7BF;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+h3 {
+	border-color: lightgrey;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+code {
+	font-family: "Lucida Console", Monaco, monospace;
+	background: lightgrey;
+	padding: 15px;
+	margin-left: 10px;
+	/* Preserve newlines */
+	white-space: pre;
+	/* These two ensure horizontal overflow causes a scrollbar. */
+	display: block;
+	overflow: auto;
+
+	border-radius: 10px;
+	box-shadow: 8px 8px 8px #6FA7BF;
+}
+
+/* Hide the leading newline of code blocks. Broken in FF? */
+code::first-line {
+	line-height: 0px;
+}
+
+/* Increase spacing of UL/OL. */
+ul {
+	line-height: 200%
+}
+ol {
+	line-height: 200%
+}
+
+/* Reset spacing of everything inside of UL/OL. */
+p {
+	line-height: 100%
+}
+
+img {
+	/* Image will shrink to fit, but max out at actual size. */
+	max-width: -moz-calc(100% - 20px);
+	max-width: -webkit-calc(100% - 20px);
+	max-width: calc(100% - 20px);
+
+	margin: 10px;
+	box-shadow: 8px 8px 8px grey;
+}
