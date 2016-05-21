@@ -11,25 +11,20 @@
 <script>
 
     function updateMarkdownLinks(markdownJson) {
-        var refs = markdownJson[1].references;
-
-        (function updateMarkdownLinks_Inner(mj) {
-            if ( mj[0] === "link" ) {
-                var url = mj[1];
-                if (!url || !url.href || !(/^[\w\- ]+\.md$/.exec(url.href))) {
-                    return;
-                }
-                mj[1].href = "index.html?md=" + encodeURIComponent(url.href);
-            } else {
-                for (var item = 1; item < mj.length; item++) {
-                    if (Array.isArray(mj[item])) {
-                        mj[item].forEach(updateMarkdownLinks_Inner);
-                    }
+        if ( markdownJson[0] === "link" ) {
+            var url = markdownJson[1];
+            if (!url || !url.href || !(/^[\w\- ]+\.md$/.exec(url.href))) {
+                return;
+            }
+            markdownJson[1].href = "index.html?md=" + encodeURIComponent(url.href);
+        } else {
+            for (var item = 1; item < markdownJson.length; item++) {
+                if (Array.isArray(markdownJson[item])) {
+                    markdownJson[item].forEach(updateMarkdownLinks);
                 }
             }
-        }) (markdownJson);
+        }
     }
-
 
     $(document).ready(function(){
         var markdownDoc = $.url().param('md');
