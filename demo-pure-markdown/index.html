@@ -4,41 +4,24 @@
     <link rel="stylesheet" href="css/theme.css" type="text/css">
 </head>
 <body>
-<div id="jqtest"> </div>
 <script src="js/jquery-1.12.3.js"></script>
 <script src="js/purl.js"></script>
 <script src="js/markdown.js"></script>
+<script src="js/triv-md-viewer.js"></script>
 <script>
 
-    function updateMarkdownLinks(markdownJson) {
-        if ( markdownJson[0] === "link" ) {
-            var url = markdownJson[1];
-            if (!url || !url.href || !(/^[\w\- ]+\.md$/.exec(url.href))) {
-                return;
-            }
-            markdownJson[1].href = "index.html?md=" + encodeURIComponent(url.href);
-        } else {
-            for (var item = 1; item < markdownJson.length; item++) {
-                if (Array.isArray(markdownJson[item])) {
-                    markdownJson[item].forEach(updateMarkdownLinks);
-                }
-            }
-        }
+$(document).ready(function(){
+    var markdownDoc = $.url().param('md');
+    if (!markdownDoc) {
+        markdownDoc = 'README.md'
     }
-
-    $(document).ready(function(){
-        var markdownDoc = $.url().param('md');
-        if (!markdownDoc) {
-            markdownDoc = 'README.md'
-        }
-        jQuery.get(markdownDoc, function(data) {
-            var tree = markdown.parse(data);
-            updateMarkdownLinks(tree);
-            var html = markdown.toHTML(tree);
-            $("#jqtest").html(html);
-        });
+    jQuery.get(markdownDoc, function(data) {
+        var html = renderMarkdown(data);
+        $("#markdown").html(html);
     });
+});
 
 </script>
+<div id="markdown"> </div>
 </body>
-</html> 
+</html>
