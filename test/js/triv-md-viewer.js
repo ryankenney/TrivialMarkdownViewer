@@ -50,22 +50,31 @@ function getMarkdownLinks(markdownJson) {
 
 function readAllPages(startPage, onComplete) {
     var pages = {};
-    var asyncTasks = [];
+    var outstandingRequests = 0;
 
-    function runNextAsyncTask() {
-        var next = asyncTasks.pop();
-        if (next) { next(); }
+    function markRequestStart() {
+
+        // TODO [rkenney]: Remove debug
+        console.log("[outstandingRequests] ++ to ["+outstandingRequests+"]");
+
+        outstandingRequests++;
     }
 
-    // Load the overall onComplete task as the final in the series
-    asyncTasks.push(function() {
-        onComplete(pages);
-    });
+    function markRequestComplete() {
+
+        // TODO [rkenney]: Remove debug
+        console.log("[outstandingRequests] -- to ["+outstandingRequests+"]");
+
+        outstandingRequests--;
+        if (outstandingRequests < 1) { onComplete(pages); }
+    }
 
     function processPage(pageName) {
 
         // TODO [rkenney]: Remove debug
         console.log("["+pageName+"] Processing");
+
+        markRequestStart();
 
         jQuery.get(pageName, function(data) {
 
@@ -77,21 +86,9 @@ function readAllPages(startPage, onComplete) {
             var pageLinks = getMarkdownLinks(tree);
 
             pageLinks.forEach(function (link) {
-
-                // TODO [rkenney]: Remove debug
-                console.log("["+pageName+"] Registering action for ["+link+"]");
-
-                asyncTasks.push(function() {
-
-                    // TODO [rkenney]: Remove debug
-                    console.log("["+pageName+"] Running action for ["+link+"]");
-
-                    if (!pages[link]) {
-                        processPage(link);
-                    } else {
-                        runNextAsyncTask();
-                    }
-                });
+                if (!pages[link]) {
+                    processPage(link);
+                }
             })
 
         }).fail(function() {
@@ -100,7 +97,7 @@ function readAllPages(startPage, onComplete) {
             console.log("["+pageName+"] Not found");
 
         }).always(function() {
-            runNextAsyncTask();
+            markRequestComplete();
         });
     }
 
