@@ -2,9 +2,6 @@
 function renderMarkdown(markdownText) {
     var tree = markdown.parse(markdownText);
     updateMarkdownLinks(tree);
-
-    readAllPages(tree);
-
     return markdown.toHTML(tree);
 }
 
