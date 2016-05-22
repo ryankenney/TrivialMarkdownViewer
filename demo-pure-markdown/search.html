@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/theme.css" type="text/css">
+</head>
+<body>
+<script src="js/jquery-1.12.3.js"></script>
+<script src="js/purl.js"></script>
+<script src="js/markdown.js"></script>
+<script src="js/triv-md-viewer.js"></script>
+<script>
+
+var allPages;
+
+$(document).ready(function(){
+    readAllPages('README.md', function(pages) {
+        allPages = pages;
+    });
+});
+
+function applySearch() {
+    var searchTerm = new RegExp($("#search-terms").val(), "i");
+    $("#results").text("");
+    for (var page in allPages) {
+        var lines = allPages[page].split(/\r?\n/);
+        lines.forEach(function (line) {
+            var matches = searchTerm.exec(line);
+            if (matches) {
+                var a = document.createElement("a");
+                a.href = "index.html?md="+page;
+                a.appendChild(document.createTextNode("\n["+page+"] "+line));
+
+                $("#results").append(a);
+            }
+        });
+    }
+}
+
+</script>
+<form onsubmit="applySearch(); return false;">
+<label>Regex Search: </label><input id="search-terms" type="text"></input>
+</form>
+<br>
+<code id="results"></code>
+</body>
+</html>
