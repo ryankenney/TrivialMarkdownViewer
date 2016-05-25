@@ -39,46 +39,40 @@ Numbers and Lists Demo
 Code Demo
 ----------------
 
-```
-Some code
-Some looooooooooong code asdfa;slf ;alsf;lasdlkfaslf;lasdj ;flkajs;lf ;lasflasfj;askfj;lkas;lf;lasf;saj flsdf;lsaj;lfj ;asljflksdlkf s;a f;asfsl;f;lsf ;l
-```
+	Some code
+	Some looooooooooong code asdfa;slf ;alsf;lasdlkfaslf;lasdj ;flkajs;lf ;lasflasfj;askfj;lkas;lf;lasf;saj flsdf;lsaj;lfj ;asljflksdlkf s;a f;asfsl;f;lsf ;l
 
 1. In a list:
 
-	```
-	line of code
-	another line
-	```
+		line of code
+		another line
 
 1. Nesting deeper...
 	* ... to here:
 
-		```
-		line of code
-		another line
-		```
+			line of code
+			another line
 
 Image Demo
 ----------------
 
-### Default
+Default:
 
 ![Alt text](limes.jpg)
 
-### Setting Width/Height
+Setting Width/Height (not supported by purl.js):
 
 ![Alt text](limes.jpg =100x50)
 
-### Setting Width Only
+Setting Width Only (not supported by purl.js):
 
 ![Alt text](limes.jpg =100x)
 
-### Setting Width Via Inline HTML and Style Attribute
+Setting Width Via Inline HTML and Style Attribute (not supported by purl.js):
 
 <img src="limes.jpg" alt="Alt text" style="width: 200px;"/>
 
-### Setting Width Via Inline HTML and Width Attribute
+Setting Width Via Inline HTML and Width Attribute (not supported by purl.js):
 
 <img src="limes.jpg" alt="Alt text" width="200px"/>
 
