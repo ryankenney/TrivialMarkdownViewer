@@ -47,13 +47,7 @@ For example:
 <html><script src="js/triv-md-viewer-bootstrap.js"></script><div id="markdown">
 <!-- END HTML HEADER -->
 
-Title
-================
-
 All of your markdown content goes here...
-
-* ...and here...
-* ...and here...
 
 <!-- BEGIN HTML FOOTER -->
 </div></html>
@@ -61,4 +55,7 @@ All of your markdown content goes here...
 
 There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-local-filesystem/README.md.html).
 
+Downloading the Source
+--------------------
 
+Just in case it's confusing, most of the source is located in the "gh-pages" branch, which is where githug lets you render html, as opposed to viewing raw text.
