@@ -32,7 +32,7 @@ Approach 1: Write Pure Markdown Documents and Load them Dynamically
 In this approach, we have a single html file (index.html), which takes a query parameter
 of "?md=" to specify the document to view.
 
-There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-pure-markdown/README.md.html).
+There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-pure-markdown/index.html?md=README.md).
 
 
 Approach 2: Write Markdown in Thinly Wrapped HTML Files
