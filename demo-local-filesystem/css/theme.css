@@ -6,7 +6,8 @@ h1 {
 	background: #0D5F82;
 	color: white;
 	padding: 5px;
-	box-shadow: 8px 8px 8px #6FA7BF;
+	box-shadow: 8px 8px 8px grey;
+	font-size: 150%;
 }
 
 h2 {
@@ -14,18 +15,21 @@ h2 {
 	border-color: #6FA7BF;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
+	font-size: 120%;
 }
 
 h3 {
 	border-color: lightgrey;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
+	font-size: 100%;
 }
 
 code {
 	font-family: "Lucida Console", Monaco, monospace;
-	background: lightgrey;
-	padding: 15px;
+	font-size: 75%;
+	background: #BDBDBD;
+	padding: 10px;
 	margin-left: 10px;
 	/* Preserve newlines */
 	white-space: pre;
@@ -33,26 +37,8 @@ code {
 	display: block;
 	overflow: auto;
 
-	border-radius: 10px;
-	box-shadow: 8px 8px 8px #6FA7BF;
-}
-
-/* Hide the leading newline of code blocks. Broken in FF? */
-code::first-line {
-	line-height: 0px;
-}
-
-/* Increase spacing of UL/OL. */
-ul {
-	line-height: 200%
-}
-ol {
-	line-height: 200%
-}
-
-/* Reset spacing of everything inside of UL/OL. */
-p {
-	line-height: 100%
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px grey;
 }
 
 img {
@@ -62,5 +48,24 @@ img {
 	max-width: calc(100% - 20px);
 
 	margin: 10px;
-	box-shadow: 8px 8px 8px grey;
+}
+
+a:link {
+	color: #1282B3;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #1282B3;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+a:active {
+	color: red;
+	text-decoration: underline;
 }
