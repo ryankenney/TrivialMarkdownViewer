@@ -16,7 +16,6 @@ URLs dynamically for security reasons.
 Comparison of the Approaches
 --------------------
 
-
 Benefits of Approach 1
 
 * You can write pure (no html wrapper) markdown text files, with a ".md" extension.
@@ -33,7 +32,8 @@ Approach 1: Write Pure Markdown Documents and Load them Dynamically
 In this approach, we have a single html file (index.html), which takes a query parameter
 of "?md=" to specify the document to view.
 
-There is a full example of this approach here under "demo-local-filesystem" of this repo.
+There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-pure-markdown/README.md.html).
+
 
 Approach 2: Write Markdown in Thinly Wrapped HTML Files
 --------------------
@@ -59,5 +59,6 @@ All of your markdown content goes here...
 </div></html>
 ```
 
-There is a full example of this approach here under "demo-pure-markdown" of this repo.
+There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-local-filesystem/README.md.html).
+
 
