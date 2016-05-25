@@ -61,16 +61,3 @@ All of your markdown content goes here...
 
 There is a full example of this approach here under "demo-pure-markdown" of this repo.
 
-
-Comparison of the Approachs
---------------------
-
-Benefits of Approach 1
-
-* You can write pure (no html wrapper) markdown text files, with a ".md" extension.
-* It is possible to do more dynamic things, like generate a search index across all files.
-	* I started down this path with a regex-based search tool, but this could easily be extended to a more robust, javascript-based search engine.
-
-Benefits of Approach 2
-
-* You can view the pages via a local filesystem (such as a DVD), so no webserver is needed.
