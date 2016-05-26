@@ -1,6 +1,8 @@
 
 function renderMarkdown(markdownText) {
-    var tree = markdown.parse(markdownText);
+	// By specifying 'Maruku', instead of the default of 'Gruber',
+	// we seem to get proper table rendering.
+    var tree = markdown.parse(markdownText, 'Maruku');
     updateMarkdownLinks(tree);
     return markdown.toHTML(tree);
 }

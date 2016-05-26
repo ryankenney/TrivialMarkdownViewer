@@ -28,17 +28,22 @@ h3 {
 code {
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 75%;
-	background: #BDBDBD;
+	background: lightgrey;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+pre code {
 	padding: 10px;
 	margin-left: 10px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px grey;
 	/* Preserve newlines */
 	white-space: pre;
 	/* These two ensure horizontal overflow causes a scrollbar. */
-	display: block;
 	overflow: auto;
-
-	border-radius: 5px;
-	box-shadow: 5px 5px 5px grey;
+	display: block;
 }
 
 img {
@@ -68,4 +73,18 @@ a:hover {
 a:active {
 	color: red;
 	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+	box-shadow: 5px 5px 5px grey;
+}
+
+th, td {
+	padding: 10px;
+	border: 2px solid lightgrey;
+}
+
+th {
+	background: lightgrey;
 }
