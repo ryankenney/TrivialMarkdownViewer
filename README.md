@@ -6,12 +6,11 @@ Overview
 
 This is a proof of concept of what you can do to create markdown viewer (poor man's wiki) with nothing but a browser.
 
-At the end of the day, I created something very useful using just a a little custom code along side purl.js.
+At the end of the day, I created something very useful using just a little custom code along side [markdown-js](https://github.com/evilstreak/markdown-js).
 
-If you're willing to jump to using a web server (versus using "file://" urls), the feature set opens up cosiderably, going as far as adding a browser-based search engine.
+If you're willing to jump to using a web server (versus using "file://" urls), the feature set opens up considerably, going as far as adding a browser-based search engine.
 The reason you need a web server isnt' that the server is doing any processing. It's simply to get around the fact that the browser is prevented from loading "file://"
 URLs dynamically for security reasons.
-
 
 Comparison of the Approaches
 --------------------
@@ -34,12 +33,13 @@ of "?md=" to specify the document to view.
 
 There is a full example of this approach [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-pure-markdown/index.html?md=README.md).
 
+* And a sample of a regex-based search engine [here](http://ryankenney.github.io/TrivialMarkdownViewer/demo-pure-markdown/search.html).
 
 Approach 2: Write Markdown in Thinly Wrapped HTML Files
 --------------------
 
 In this approach, we have a ".md.html" file for each page,
-which contains a very thin htmtl wrapper around the markdown content.
+which contains a very thin html wrapper around the markdown content.
 
 For example:
 
