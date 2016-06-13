@@ -88,3 +88,12 @@ th, td {
 th {
 	background: lightgrey;
 }
+
+blockquote {
+	border-left: solid darkgrey;
+	border-width: 5px;
+	padding: 0px 20px 0px 20px;
+	margin: 0px 0px 0px 10px;
+	font-style: italic;
+}
+
