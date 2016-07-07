@@ -3,22 +3,32 @@ body {
 }
 
 h1 {
-	background: #0D5F82;
-	color: white;
-	padding: 5px;
-	box-shadow: 8px 8px 8px grey;
-	font-size: 150%;
+	color: #976808;
+	border-color: #EB9D02;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	font-size: 200%;
+	font-style: italic;
 }
 
 h2 {
-	color: #0D5F82;
-	border-color: #6FA7BF;
+	background: #364D86;
+	color: white;
+	padding: 5px;
+	box-shadow: 8px 8px 8px grey;
+	font-size: 120%;
+}
+
+h3 {
+	color: #364D86;
+	border-color: #869FDD;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	font-size: 120%;
 }
 
-h3 {
+h4 {
+	color: #4d4d4d;
 	border-color: lightgrey;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
@@ -56,22 +66,22 @@ img {
 }
 
 a:link {
-	color: #1282B3;
+	color: #976808;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #1282B3;
+	color: #976808;
 	text-decoration: none;
 }
 
 a:hover {
-	color: red;
+	color: blue;
 	text-decoration: underline;
 }
 
 a:active {
-	color: red;
+	color: blue;
 	text-decoration: underline;
 }
 
