@@ -10,8 +10,11 @@ function renderMarkdown(markdownText) {
 	var headerTree = collectHeaderTree(tree, ["div", {class:"header_index"}]);
 	var headerHtmlTree = markdown.toHTMLTree(headerTree);
 
-	htmlTree[0] = "div";
-	htmlTree = ["html", headerHtmlTree, htmlTree];
+	var hasAtLeastThreeEntries = headerTree.length > 5 /* 3 items plus "div" and attributes */;
+	if (hasAtLeastThreeEntries) {
+		htmlTree[0] = "div";
+		htmlTree = ["html", headerHtmlTree, htmlTree];
+	}
 	
 	return markdown.renderJsonML(htmlTree);
 }
