@@ -88,9 +88,7 @@ function getMarkdownLinks(markdownJson) {
         } else {
             for (var item = 1; item < markdownJson.length; item++) {
                 if (Array.isArray(markdownJson[item])) {
-                    markdownJson[item].forEach(
-                        function (element) { inner(element, collectedMarkdownLinks) }
-                    );
+                    inner(markdownJson[item], collectedMarkdownLinks);
                 }
             }
         }
