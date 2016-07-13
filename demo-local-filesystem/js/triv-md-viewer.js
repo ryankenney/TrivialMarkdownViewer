@@ -31,16 +31,18 @@ function updateMarkdownLinks(markdownJson) {
             }
         }
     }
-}
+}	
 
 function collectHeaderTree(markdownJson, headerTree) {
-    if ( markdownJson[0] === "header" ) {
+    // NOTE: We limit to levels h1-h3 to prevent noisy header index
+    if ( markdownJson[0] === "header" && markdownJson[1].level < 4) {
 		var escapedTitle = markdownJson[2].replace(/\W+/g, "_")
 		headerTree.push(
-			["h"+markdownJson[1].level, 
+			["li", 
+				{class:"toc"+markdownJson[1].level},
 				["a", 
-				{href:"#h"+markdownJson[1].level+"_"+escapedTitle},
-				markdownJson[2]]]);
+					{href:"#h"+markdownJson[1].level+"_"+escapedTitle},
+					markdownJson[2]]]);
     } else {
         for (var item = 1; item < markdownJson.length; item++) {
             if (Array.isArray(markdownJson[item])) {
@@ -56,7 +58,8 @@ function injectHeadingAnchors(htmlTree) {
 		htmlTree[0] === "h2" ||  
 		htmlTree[0] === "h3" ||  
 		htmlTree[0] === "h4" ||  
-		htmlTree[0] === "h5")
+		htmlTree[0] === "h5" ||  
+		htmlTree[0] === "h6")
 	{
 		var escaped = htmlTree[1].replace(/\W+/g, "_")
 		htmlTree[1] = ["a", {name:htmlTree[0]+"_"+escaped}, htmlTree[1]];
