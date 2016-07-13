@@ -62,7 +62,7 @@ function injectHeadingAnchors(htmlTree) {
 		htmlTree[0] === "h6")
 	{
 		var escaped = htmlTree[1].replace(/\W+/g, "_")
-		htmlTree[1] = ["a", {name:htmlTree[0]+"_"+escaped}, htmlTree[1]];
+		htmlTree[1] = ["a", {name:htmlTree[0]+"_"+escaped, class:"heading"}, htmlTree[1]];
     } else {
         for (var item = 1; item < htmlTree.length; item++) {
             if (Array.isArray(htmlTree[item])) {

@@ -43,6 +43,34 @@ h4 {
 	overflow: auto;
 }
 
+a.heading:hover {
+	text-decoration: none;
+}
+
+h1 a.heading:hover {
+	color: #976808;
+}
+
+h2 a.heading:hover {
+	color: white;
+}
+
+h3 a.heading:hover {
+	color: #364D86;
+}
+
+h4 a.heading:hover {
+	color: #4d4d4d;
+}
+
+h5 a.heading:hover {
+	color: black;
+}
+
+h6 a.heading:hover {
+	color: black;
+}
+
 div {
 	display: inline;
 }
