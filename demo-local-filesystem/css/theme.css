@@ -9,6 +9,8 @@ h1 {
 	border-bottom-style: solid;
 	font-size: 200%;
 	font-style: italic;
+	display: block;
+	overflow: auto;
 }
 
 h2 {
@@ -17,6 +19,8 @@ h2 {
 	padding: 5px;
 	box-shadow: 8px 8px 8px grey;
 	font-size: 120%;
+	display: block;
+	overflow: auto;
 }
 
 h3 {
@@ -25,6 +29,8 @@ h3 {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	font-size: 120%;
+	display: block;
+	overflow: auto;
 }
 
 h4 {
@@ -33,6 +39,46 @@ h4 {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	font-size: 100%;
+	display: block;
+	overflow: auto;
+}
+
+div {
+	display: inline;
+}
+
+div.header_index {
+	border-color: lightgrey;
+	border-width: 3px;
+	border-style: solid;
+	float: right;
+	margin: 20px;
+}
+
+.header_index h1, .header_index h2, .header_index h3, .header_index h4, .header_index h5 {
+	font-size: 100%;
+	font-style: normal;
+	border-bottom-width: 0;
+	background: none;
+	box-shadow: 0px 0px 0px grey;
+	padding: 0px;
+	margin: 4px;
+}
+
+.header_index h2 {
+	margin-left: 30px;
+}
+
+.header_index h3 {
+	margin-left: 40px;
+}
+
+.header_index h4 {
+	margin-left: 50px;
+}
+
+.header_index h5 {
+	margin-left: 60px;
 }
 
 code {
@@ -106,4 +152,3 @@ blockquote {
 	margin: 0px 0px 0px 10px;
 	font-style: italic;
 }
-

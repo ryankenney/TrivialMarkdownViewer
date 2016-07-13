@@ -4,7 +4,16 @@ function renderMarkdown(markdownText) {
 	// we seem to get proper table rendering.
     var tree = markdown.parse(markdownText, 'Maruku');
     updateMarkdownLinks(tree);
-    return markdown.toHTML(tree);
+    var htmlTree = markdown.toHTMLTree(tree);
+	injectHeadingAnchors(htmlTree);
+
+	var headerTree = collectHeaderTree(tree, ["div", {class:"header_index"}]);
+	var headerHtmlTree = markdown.toHTMLTree(headerTree);
+
+	htmlTree[0] = "div";
+	htmlTree = ["html", headerHtmlTree, htmlTree];
+	
+	return markdown.renderJsonML(htmlTree);
 }
 
 function updateMarkdownLinks(markdownJson) {
@@ -18,7 +27,43 @@ function updateMarkdownLinks(markdownJson) {
     } else {
         for (var item = 1; item < markdownJson.length; item++) {
             if (Array.isArray(markdownJson[item])) {
-                markdownJson[item].forEach(updateMarkdownLinks);
+                updateMarkdownLinks(markdownJson[item]);
+            }
+        }
+    }
+}
+
+function collectHeaderTree(markdownJson, headerTree) {
+    if ( markdownJson[0] === "header" ) {
+		var escapedTitle = markdownJson[2].replace(/\W+/g, "_")
+		headerTree.push(
+			["h"+markdownJson[1].level, 
+				["a", 
+				{href:"#h"+markdownJson[1].level+"_"+escapedTitle},
+				markdownJson[2]]]);
+    } else {
+        for (var item = 1; item < markdownJson.length; item++) {
+            if (Array.isArray(markdownJson[item])) {
+				collectHeaderTree(markdownJson[item], headerTree);
+            }
+        }
+    }
+	return headerTree;
+}
+
+function injectHeadingAnchors(htmlTree) {
+    if (htmlTree[0] === "h1" ||
+		htmlTree[0] === "h2" ||  
+		htmlTree[0] === "h3" ||  
+		htmlTree[0] === "h4" ||  
+		htmlTree[0] === "h5")
+	{
+		var escaped = htmlTree[1].replace(/\W+/g, "_")
+		htmlTree[1] = ["a", {name:htmlTree[0]+"_"+escaped}, htmlTree[1]];
+    } else {
+        for (var item = 1; item < htmlTree.length; item++) {
+            if (Array.isArray(htmlTree[item])) {
+                injectHeadingAnchors(htmlTree[item]);
             }
         }
     }
