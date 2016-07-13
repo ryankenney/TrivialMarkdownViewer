@@ -1,0 +1,46 @@
+
+TOC vs. Image Demo
+================
+
+Heading
+----------------
+
+The image is not covered by the TOC, but it is pushed down.
+
+![Alt text](limes.jpg)
+
+### Heading with a very long title that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+Heading
+----------------
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+

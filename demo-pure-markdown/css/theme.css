@@ -9,6 +9,8 @@ h1 {
 	border-bottom-style: solid;
 	font-size: 200%;
 	font-style: italic;
+	display: block;
+	overflow: auto;
 }
 
 h2 {
@@ -17,6 +19,8 @@ h2 {
 	padding: 5px;
 	box-shadow: 8px 8px 8px grey;
 	font-size: 120%;
+	display: block;
+	overflow: auto;
 }
 
 h3 {
@@ -25,6 +29,8 @@ h3 {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	font-size: 120%;
+	display: block;
+	overflow: auto;
 }
 
 h4 {
@@ -33,6 +39,83 @@ h4 {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	font-size: 100%;
+	display: block;
+	overflow: auto;
+}
+
+a.heading:hover {
+	text-decoration: none;
+}
+
+h1 a.heading:hover {
+	color: #976808;
+}
+
+h2 a.heading:hover {
+	color: white;
+}
+
+h3 a.heading:hover {
+	color: #364D86;
+}
+
+h4 a.heading:hover {
+	color: #4d4d4d;
+}
+
+h5 a.heading:hover {
+	color: black;
+}
+
+h6 a.heading:hover {
+	color: black;
+}
+
+div {
+	display: inline;
+}
+
+div.header_index {
+	border-color: #EB9D02;
+	border-width: 3px;
+	border-style: solid;
+	float: right;
+	margin: 20px;
+	max-width: 33%;
+	padding: 20px;
+	box-shadow: 8px 8px 8px grey;
+}
+
+li.toc1, li.toc2, li.toc3, li.toc4, li.toc5, li.toc6 {
+	color: #EB9D02;
+	list-style-type: square;
+list-style-position: outside;
+}
+
+li.toc1 {
+	margin-left: 0px;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+li.toc2 {
+	margin-left: 20px;
+}
+
+li.toc3 {
+	margin-left: 40px;
+}
+
+li.toc4 {
+	margin-left: 60px;
+}
+
+li.toc5 {
+	margin-left: 80px;
+}
+
+li.toc6 {
+	margin-left: 100px;
 }
 
 code {
@@ -106,4 +189,3 @@ blockquote {
 	margin: 0px 0px 0px 10px;
 	font-style: italic;
 }
-

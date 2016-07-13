@@ -1,0 +1,147 @@
+Wiki Code Samples
+================
+
+See the source of this page to understand how these things were created.
+
+Numbers and Lists
+----------------
+
+	0. Blah
+		* Yada yada
+			0. Yada yada 1
+			0. Yada yada 2
+		* Yada yada
+	0. Blah blah
+		0. Yada yada
+			* Yada yada 1
+			* Yada yada 2
+		0. Yada yada
+			* Yada yada
+
+0. Blah
+	* Yada yada
+		0. Yada yada 1
+		0. Yada yada 2
+	* Yada yada
+0. Blah blah
+	0. Yada yada
+		* Yada yada 1
+		* Yada yada 2
+	0. Yada yada
+		* Yada yada
+
+Tables
+----------------
+
+	| Column A | Column B |
+	| -------- | -------- |
+	| Data A1  | Data B1  |
+	| Data A2  | Data B2  |
+
+| Column A | Column B |
+| -------- | -------- |
+| Data A1  | Data B1  |
+| Data A2  | Data B2  |
+
+Links
+----------------
+
+	[A Link](https://daringfireball.net/projects/markdown/syntax)
+
+[A Link](https://daringfireball.net/projects/markdown/syntax)
+
+Code Blocks
+----------------
+
+	Here's some ```inline code``` (within text)
+
+		Here's a code block
+		... line 2
+		... line 3
+
+	1. In a list:
+
+			Here's a code block within a list
+			... line 2
+
+	1. Nesting deeper...
+
+		* ... to here:
+
+				Here's a code block more deeply nested within a list
+				... line 2
+
+Here's some ```inline code``` (within text)
+
+	Here's a code block
+	... line 2
+	... line 3
+
+1. In a list:
+
+		Here's a code block within a list
+		... line 2
+
+1. Nesting deeper...
+
+	* ... to here:
+
+			Here's a code block more deeply nested within a list
+			... line 2
+
+Headings
+----------------
+
+	Heading Level 1 (Usually Page Title)
+	========
+
+	Blah blah
+
+	Heading Level 2
+	--------
+
+	Blah blah
+
+	### Heading Level 3
+
+	Blah blah
+
+	#### Heading Level 4
+
+	Blah blah
+
+[View Here](Wiki-Code-Samples_Headings-Demo.md) (moved to other page to avoid confusion with the headings on this page)
+
+Also note that the TOC appears on the page if we add enough headings. [For Example](Wiki-Code-Samples_Headings-Demo_More-Headings.md)
+
+	
+Block Quotes
+----------------
+
+	> Here's a basic code block. Note that code blocks need at least two lines beginning with ">",
+	> so single line quotes require a leading empty line.
+	> 
+
+> Here's a basic code block. Note that code blocks need at least two lines beginning with ">",
+> so single line quotes require a leading empty line.
+> 
+
+	> Note that block quotes can contain other markdown elements. Here's an example of a block quote containing a nested code block.
+	> 
+	> 	The nested code block
+	> 
+
+> Note that block quotes can contain other markdown elements. Here's an example of a block quote containing a nested code block.
+> 
+> 	The nested code block
+> 
+
+Images
+----------------
+
+	![Alt text](limes.jpg)
+
+>
+> Note: Images will scale to fit, up to 100% size.
+
+![Alt text](limes.jpg)

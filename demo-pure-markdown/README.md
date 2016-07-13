@@ -1,114 +1,16 @@
 README.md
 ================
 
-Link Demo
+Syntax Demo
 ----------------
 
-[An External Page](https://daringfireball.net/projects/markdown/syntax)
+* [Wiki Code Samples](Wiki-Code-Samples.md)
 
-[A Local Page](other-page.md)
-
-Code Demo
+Layout Testing
 ----------------
 
-Some ```inline code``` here
-
-	Some code in a block
-	Some looooooooooong code asdfa;slf ;alsf;lasdlkfaslf;lasdj ;flkajs;lf ;lasflasfj;askfj;lkas;lf;lasf;saj flsdf;lsaj;lfj ;asljflksdlkf s;a f;asfsl;f;lsf ;l
-
-1. In a list:
-
-		line of code
-		another line
-
-1. Nesting deeper...
-
-	* ... to here:
-
-			line of code
-			another line
-
-Table Demo
-----------------
-
-| Column A | Column B |
-| -------- | -------- |
-| Data A1  | Data B1  |
-| Data A2  | Data B2  |
-
-
-Heading Demo
-----------------
-
-### H3
-
-xxx
-
-#### H4
-
-xxx
-
-##### H5
-
-xxx
-
-###### H6
-
-xxx
-
-
-Numbers and Lists Demo
-----------------
-
-1. Blah
-	* Yada yada
-		1. Yada yada 1
-		1. Yada yada 2
-	* Yada yada
-1. Blah blah
-	1. Yada yada
-		* Yada yada 1
-		* Yada yada 2
-	1. Yada yada
-		* Yada yada
-
-Block Quotes
-----------------
-
-Here's abasic code block. Note that code blocks need at least two lines beginning with ">",
-so single line quotes require a leading/trailing empty line.
-
-> A block quote
-> 
-
-Note that block quotes can contain other markdown elements. Here's an example of a block quote containing a code block:
-
-> 
-> A block quote
->
-> 	The nested code block
-> 
-
-Image Demo
-----------------
-
-Default:
-
-![Alt text](limes.jpg)
-
-Setting Width/Height (not supported by purl.js):
-
-![Alt text](limes.jpg =100x50)
-
-Setting Width Only (not supported by purl.js):
-
-![Alt text](limes.jpg =100x)
-
-Setting Width Via Inline HTML and Style Attribute (not supported by purl.js):
-
-<img src="limes.jpg" alt="Alt text" style="width: 200px;"/>
-
-Setting Width Via Inline HTML and Width Attribute (not supported by purl.js):
-
-<img src="limes.jpg" alt="Alt text" width="200px"/>
+* [TOC vs. Block Quote Demo](TOC-vs-Block-Quote-Demo.md)
+* [TOC vs. Code Block Demo](TOC-vs-Code-Block-Demo.md)
+* [TOC vs. Image Demo](TOC-vs-Image-Demo.md)
+* [TOC vs. Table Demo](TOC-vs-Table-Demo.md)
 

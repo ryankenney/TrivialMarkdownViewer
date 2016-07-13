@@ -1,0 +1,54 @@
+
+TOC vs. Table Demo
+================
+
+Heading
+----------------
+
+The table ends at TOC.
+
+| Header | Header |
+|--------|--------| 
+| A cell that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever | A cell block that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever| 
+
+### Heading with a very long title that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever
+
+The next table expands to full width.
+
+| Header | Header |
+|--------|--------| 
+| A cell that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever | A cell block that goes on forever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever, and ever| 
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+Heading
+----------------
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
+### Heading
+
+#### Heading
+
+##### Heading
+
+##### Heading
+
