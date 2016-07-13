@@ -89,6 +89,7 @@ div.header_index {
 li.toc1, li.toc2, li.toc3, li.toc4, li.toc5, li.toc6 {
 	color: #EB9D02;
 	list-style-type: square;
+list-style-position: outside;
 }
 
 li.toc1 {
@@ -98,23 +99,23 @@ li.toc1 {
 }
 
 li.toc2 {
-	margin-left: 10px;
+	margin-left: 20px;
 }
 
 li.toc3 {
-	margin-left: 30px;
-}
-
-li.toc4 {
 	margin-left: 40px;
 }
 
+li.toc4 {
+	margin-left: 60px;
+}
+
 li.toc5 {
-	margin-left: 50px;
+	margin-left: 80px;
 }
 
 li.toc6 {
-	margin-left: 60px;
+	margin-left: 100px;
 }
 
 code {
